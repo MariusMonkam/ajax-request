@@ -17,6 +17,11 @@ request.onreadystatechange = function(){
     data=JSON.parse(request.responseText);
     console.log(data);
     console.log(request);
+    $.each(data.prizes,function(key,val){
+      $('.prize-nobel')
+      .append('<li>'+ val.year  +  val.category  + '</li>')
+    })
+    
   }
 }
 
